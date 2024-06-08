@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_blocks_preguntas_frecuentes",
+  "info": {
+    "displayName": "Preguntas frecuentes",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Preguntas": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.q-and-a"
+    }
+  }
+}

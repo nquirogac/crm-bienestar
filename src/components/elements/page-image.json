@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_elements_page_images",
+  "info": {
+    "displayName": "PageImage",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "page": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_blocks_normatividads",
+  "info": {
+    "displayName": "Normatividad",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "normativa": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.normativa"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

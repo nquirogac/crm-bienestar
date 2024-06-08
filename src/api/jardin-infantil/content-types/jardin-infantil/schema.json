@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jardin_infantils",
+  "info": {
+    "singularName": "jardin-infantil",
+    "pluralName": "jardin-infantils",
+    "displayName": "JardinInfantil",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ContactData": {
+      "type": "json"
+    },
+    "PageImage": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.page-image"
+    },
+    "subpages": {
+      "type": "dynamiczone",
+      "components": [
+        "blocks.home",
+        "blocks.normatividad",
+        "blocks.preguntas-frecuentes",
+        "blocks.py-la"
+      ]
+    }
+  }
+}

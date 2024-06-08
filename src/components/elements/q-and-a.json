@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_elements_q_and_as",
+  "info": {
+    "displayName": "Q&A",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Pregunta": {
+      "type": "text"
+    },
+    "Respuesta": {
+      "type": "richtext"
+    }
+  }
+}

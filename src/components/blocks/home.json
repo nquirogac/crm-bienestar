@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blocks_homes",
+  "info": {
+    "displayName": "Home",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "QuienesSomos": {
+      "type": "text"
+    },
+    "QueQueremosSer": {
+      "type": "text"
+    },
+    "videoLink": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_blocks_py_las",
+  "info": {
+    "displayName": "PyLA",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Componentes": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.pedagogia-y-lineas-de-accion-card"
+    }
+  }
+}
