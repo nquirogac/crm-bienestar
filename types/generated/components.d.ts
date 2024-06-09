@@ -51,6 +51,17 @@ export interface BlocksPyLa extends Schema.Component {
   };
 }
 
+export interface ElementsArchivo extends Schema.Component {
+  collectionName: 'components_elements_archivos';
+  info: {
+    displayName: 'archivo';
+  };
+  attributes: {
+    archivo: Attribute.Media<'files'>;
+    title: Attribute.String;
+  };
+}
+
 export interface ElementsNormativa extends Schema.Component {
   collectionName: 'components_elements_normativas';
   info: {
@@ -107,6 +118,7 @@ declare module '@strapi/types' {
       'blocks.normatividad': BlocksNormatividad;
       'blocks.preguntas-frecuentes': BlocksPreguntasFrecuentes;
       'blocks.py-la': BlocksPyLa;
+      'elements.archivo': ElementsArchivo;
       'elements.normativa': ElementsNormativa;
       'elements.page-image': ElementsPageImage;
       'elements.pedagogia-y-lineas-de-accion-card': ElementsPedagogiaYLineasDeAccionCard;

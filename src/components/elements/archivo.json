@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_elements_archivos",
+  "info": {
+    "displayName": "archivo"
+  },
+  "options": {},
+  "attributes": {
+    "archivo": {
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}
