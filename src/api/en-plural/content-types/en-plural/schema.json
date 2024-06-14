@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "en_plurals",
+  "info": {
+    "singularName": "en-plural",
+    "pluralName": "en-plurals",
+    "displayName": "enPlural",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "icono": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "categorias": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::categoria.categoria"
+    }
+  }
+}

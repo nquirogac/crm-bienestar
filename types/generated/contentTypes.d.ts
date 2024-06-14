@@ -788,6 +788,42 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiCategoriaCategoria extends Schema.CollectionType {
+  collectionName: 'categorias';
+  info: {
+    singularName: 'categoria';
+    pluralName: 'categorias';
+    displayName: 'categoria';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    image: Attribute.Media<'images'>;
+    noticias: Attribute.Relation<
+      'api::categoria.categoria',
+      'oneToMany',
+      'api::noticia.noticia'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::categoria.categoria',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::categoria.categoria',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiConvocatoriaConvocatoria extends Schema.CollectionType {
   collectionName: 'convocatorias';
   info: {
@@ -828,6 +864,42 @@ export interface ApiConvocatoriaConvocatoria extends Schema.CollectionType {
   };
 }
 
+export interface ApiEnPluralEnPlural extends Schema.SingleType {
+  collectionName: 'en_plurals';
+  info: {
+    singularName: 'en-plural';
+    pluralName: 'en-plurals';
+    displayName: 'enPlural';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    icono: Attribute.Media<'images'>;
+    categorias: Attribute.Relation<
+      'api::en-plural.en-plural',
+      'oneToMany',
+      'api::categoria.categoria'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::en-plural.en-plural',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::en-plural.en-plural',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiJardinJardin extends Schema.SingleType {
   collectionName: 'jardins';
   info: {
@@ -861,6 +933,45 @@ export interface ApiJardinJardin extends Schema.SingleType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::jardin.jardin',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiNoticiaNoticia extends Schema.CollectionType {
+  collectionName: 'noticias';
+  info: {
+    singularName: 'noticia';
+    pluralName: 'noticias';
+    displayName: 'noticia';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    fecha: Attribute.Date;
+    edicion: Attribute.Integer;
+    images: Attribute.Media<'images', true>;
+    Contenido: Attribute.Blocks;
+    categoria: Attribute.Relation<
+      'api::noticia.noticia',
+      'manyToOne',
+      'api::categoria.categoria'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::noticia.noticia',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::noticia.noticia',
       'oneToOne',
       'admin::user'
     > &
@@ -914,8 +1025,11 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::categoria.categoria': ApiCategoriaCategoria;
       'api::convocatoria.convocatoria': ApiConvocatoriaConvocatoria;
+      'api::en-plural.en-plural': ApiEnPluralEnPlural;
       'api::jardin.jardin': ApiJardinJardin;
+      'api::noticia.noticia': ApiNoticiaNoticia;
       'api::tag.tag': ApiTagTag;
     }
   }
