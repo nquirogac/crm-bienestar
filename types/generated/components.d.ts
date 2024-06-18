@@ -55,10 +55,13 @@ export interface ElementsArchivo extends Schema.Component {
   collectionName: 'components_elements_archivos';
   info: {
     displayName: 'archivo';
+    description: '';
   };
   attributes: {
     archivo: Attribute.Media<'files'>;
     title: Attribute.String;
+    link: Attribute.String;
+    imagen: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
   };
 }
 
