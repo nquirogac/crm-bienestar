@@ -14,7 +14,7 @@
         "images"
       ]
     },
-    "Preguntas": {
+    "preguntas": {
       "type": "component",
       "repeatable": true,
       "component": "elements.q-and-a"

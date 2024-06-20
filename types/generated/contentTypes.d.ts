@@ -913,7 +913,7 @@ export interface ApiJardinJardin extends Schema.SingleType {
   };
   attributes: {
     contactData: Attribute.JSON;
-    PageImage: Attribute.Component<'elements.page-image', true>;
+    pageImage: Attribute.Component<'elements.page-image', true>;
     subPages: Attribute.DynamicZone<
       [
         'blocks.home',
@@ -946,6 +946,7 @@ export interface ApiNoticiaNoticia extends Schema.CollectionType {
     singularName: 'noticia';
     pluralName: 'noticias';
     displayName: 'noticia';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -955,7 +956,7 @@ export interface ApiNoticiaNoticia extends Schema.CollectionType {
     fecha: Attribute.Date;
     edicion: Attribute.Integer;
     images: Attribute.Media<'images', true>;
-    Contenido: Attribute.Blocks;
+    contenido: Attribute.Blocks;
     categoria: Attribute.Relation<
       'api::noticia.noticia',
       'manyToOne',

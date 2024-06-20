@@ -7,8 +7,8 @@ export interface BlocksHome extends Schema.Component {
     description: '';
   };
   attributes: {
-    QuienesSomos: Attribute.Text;
-    QueQueremosSer: Attribute.Text;
+    quienesSomos: Attribute.Text;
+    queQueremosSer: Attribute.Text;
     videoLink: Attribute.String;
   };
 }
@@ -33,7 +33,7 @@ export interface BlocksPreguntasFrecuentes extends Schema.Component {
   };
   attributes: {
     image: Attribute.Media<'images'>;
-    Preguntas: Attribute.Component<'elements.q-and-a', true>;
+    preguntas: Attribute.Component<'elements.q-and-a', true>;
   };
 }
 
@@ -44,7 +44,7 @@ export interface BlocksPyLa extends Schema.Component {
     description: '';
   };
   attributes: {
-    Componentes: Attribute.Component<
+    componentes: Attribute.Component<
       'elements.pedagogia-y-lineas-de-accion-card',
       true
     >;
@@ -85,7 +85,7 @@ export interface ElementsPageImage extends Schema.Component {
     description: '';
   };
   attributes: {
-    Image: Attribute.Media<'images'>;
+    image: Attribute.Media<'images'>;
     page: Attribute.String;
   };
 }
@@ -109,8 +109,8 @@ export interface ElementsQAndA extends Schema.Component {
     description: '';
   };
   attributes: {
-    Pregunta: Attribute.Text;
-    Respuesta: Attribute.RichText;
+    pregunta: Attribute.Text;
+    respuesta: Attribute.RichText;
   };
 }
 

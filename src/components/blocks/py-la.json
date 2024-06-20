@@ -6,7 +6,7 @@
   },
   "options": {},
   "attributes": {
-    "Componentes": {
+    "componentes": {
       "type": "component",
       "repeatable": true,
       "component": "elements.pedagogia-y-lineas-de-accion-card"
