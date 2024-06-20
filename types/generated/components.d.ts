@@ -58,7 +58,6 @@ export interface ElementsArchivo extends Schema.Component {
     description: '';
   };
   attributes: {
-    archivo: Attribute.Media<'files'>;
     title: Attribute.String;
     link: Attribute.String;
     imagen: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;

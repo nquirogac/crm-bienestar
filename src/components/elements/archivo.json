@@ -6,14 +6,6 @@
   },
   "options": {},
   "attributes": {
-    "archivo": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "files"
-      ]
-    },
     "title": {
       "type": "string"
     },
@@ -21,14 +13,15 @@
       "type": "string"
     },
     "imagen": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     }
   }
 }
