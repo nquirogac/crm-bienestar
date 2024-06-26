@@ -15,7 +15,7 @@
     "contactData": {
       "type": "json"
     },
-    "PageImage": {
+    "pageImage": {
       "type": "component",
       "repeatable": true,
       "component": "elements.page-image"

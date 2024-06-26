@@ -4,7 +4,8 @@
   "info": {
     "singularName": "noticia",
     "pluralName": "noticias",
-    "displayName": "noticia"
+    "displayName": "noticia",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -21,13 +22,14 @@
       "type": "integer"
     },
     "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
-    "Contenido": {
+    "contenido": {
       "type": "blocks"
     },
     "categoria": {
