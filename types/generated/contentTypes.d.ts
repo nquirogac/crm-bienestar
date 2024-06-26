@@ -846,6 +846,11 @@ export interface ApiConvocatoriaConvocatoria extends Schema.CollectionType {
       'manyToOne',
       'api::tag.tag'
     >;
+    periodo: Attribute.Relation<
+      'api::convocatoria.convocatoria',
+      'oneToOne',
+      'api::periodo.periodo'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -980,6 +985,37 @@ export interface ApiNoticiaNoticia extends Schema.CollectionType {
   };
 }
 
+export interface ApiPeriodoPeriodo extends Schema.CollectionType {
+  collectionName: 'periodos';
+  info: {
+    singularName: 'periodo';
+    pluralName: 'periodos';
+    displayName: 'periodo';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    periodo: Attribute.String & Attribute.DefaultTo<'yyyy-xx'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::periodo.periodo',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::periodo.periodo',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTagTag extends Schema.CollectionType {
   collectionName: 'tags';
   info: {
@@ -1031,6 +1067,7 @@ declare module '@strapi/types' {
       'api::en-plural.en-plural': ApiEnPluralEnPlural;
       'api::jardin.jardin': ApiJardinJardin;
       'api::noticia.noticia': ApiNoticiaNoticia;
+      'api::periodo.periodo': ApiPeriodoPeriodo;
       'api::tag.tag': ApiTagTag;
     }
   }

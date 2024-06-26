@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "periodos",
+  "info": {
+    "singularName": "periodo",
+    "pluralName": "periodos",
+    "displayName": "periodo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "periodo": {
+      "type": "string",
+      "regex": "^\\d{4}-(01|02)$",
+      "default": "yyyy-xx"
+    }
+  }
+}
